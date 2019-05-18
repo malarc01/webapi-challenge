@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
-    "start": "node index.js" 
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,10 @@
   },
   "homepage": "https://github.com/LambdaSchool/Sprint-Challenge-Node-Express#readme",
   "dependencies": {
+    "express": "^4.17.0",
     "helmet": "^3.16.0",
     "knex": "^0.16.5",
-    "sqlite3": "^4.0.6"
+    "sqlite3": "^4.0.8"
   },
   "devDependencies": {
     "knex-cleaner": "^1.1.4"
