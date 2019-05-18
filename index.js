@@ -1,3 +1,5 @@
+// require('dotenv').config();
+
 const express = require('express');
 
 const projectRoutes= require('./twoRouters/projectRouters');
@@ -37,6 +39,6 @@ server.get('/now', (req, res) => {
 
 
 
-server.listen(9000, () => {
-  console.log('\n*** Server Running on http://localhost:9000 ***\n');
+server.listen(7000, () => {
+  console.log('\n*** Server Running on http://localhost:7000 ***\n');
 });
