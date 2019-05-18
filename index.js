@@ -38,7 +38,7 @@ server.get('/now', (req, res) => {
 
 
 
-
-server.listen(7000, () => {
+const port = process.env.PORT ||7000;
+server.listen(port, () => {
   console.log('\n*** Server Running on http://localhost:7000 ***\n');
 });
