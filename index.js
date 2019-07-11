@@ -92,6 +92,17 @@ server.use((err, req, res, next) => {
   res.status(500).json(err);
   next();
 })
+
+server.get('/', (req, res) => {
+  // name is not important (could be request, response), position is.
+  res.send('!!!!!!!');
+  // .send() is a helper method that is part of the response object
+});
+
+server.get('/now', (req, res) => {
+  const now = new Date().toISOString();
+  res.send(now);
+});
 const port = process.env.PORT || 7000;
 server.listen(port, () => {
   console.log('\n*** Server Running on http://localhost:7000 ***\n');
