@@ -1,21 +1,18 @@
+// Update with your config settings.
+
 module.exports = {
+
   development: {
     client: 'sqlite3',
-    useNullAsDefault: true,
     connection: {
-      filename: './data/lambda.db3',
+      filename: './data/recipe.sqlite3'
     },
-    pool: {
-      afterCreate: (conn, done) => {
-        conn.run('PRAGMA foreign_keys = ON', done);
-      },
-    },
+    useNullAsDefault: true,
     migrations: {
-      directory: './data/migrations',
-      tableName: 'dbmigrations',
+      directory: './data/migrations'
     },
     seeds: {
-      directory: './data/seeds',
-    },
-  },
+      directory: './data/seeds'
+    }
+  }
 };
