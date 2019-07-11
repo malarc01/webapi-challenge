@@ -2,7 +2,7 @@
 
 const express = require('express');
 
-const projectRoutes= require('./twoRouters/projectRouters');
+const projectRoutes = require('./twoRouters/projectRouters');
 
 const actionRoutes = require('./twoRouters/actionRouters')
 
@@ -13,7 +13,7 @@ const actionRoutes = require('./twoRouters/actionRouters')
 
 const server = express();
 
-server.use('/projects',projectRoutes)
+server.use('/projects', projectRoutes)
 server.use('/actions', actionRoutes)
 
 // Middleware
@@ -26,7 +26,7 @@ server.use(express.json()); // teaches express how to parse JSON from the reques
 // Explain what `req` and `res` are.
 server.get('/', (req, res) => {
   // name is not important (could be request, response), position is.
-  res.send('Hello World!!!!!!!!!');
+  res.send('!!!!!!!');
   // .send() is a helper method that is part of the response object
 });
 
@@ -38,7 +38,7 @@ server.get('/now', (req, res) => {
 
 
 
-const port = process.env.PORT ||7000;
+const port = process.env.PORT || 7000;
 server.listen(port, () => {
   console.log('\n*** Server Running on http://localhost:7000 ***\n');
 });
