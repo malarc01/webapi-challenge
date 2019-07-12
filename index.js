@@ -51,7 +51,7 @@ server.post('/api/recipes/', async (req, res) => {
   } = req.body;
   let recipeId;
 
-  const recipe = { name: recipeName, dishId };
+  const recipe = { name: recipeNAME, dishId };
   try {
     await db.transaction(async (trx) => {
       recipeId = await trx('recipes').insert(recipe);
